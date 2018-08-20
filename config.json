@@ -1,0 +1,6 @@
+[{
+  "comment":"List topics for sns",
+  "schedule":"@every 1m",
+  "command":"aws sns publish --topic-arn $TB_CRONJOB_HEARTBEAT_TOPIC_ARN --message `date +%s` --profile thinblock",
+  "onstart": true
+}]
